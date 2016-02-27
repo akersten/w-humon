@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-DEBUG = True
+SCRIPT_NAME = '/humon'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
