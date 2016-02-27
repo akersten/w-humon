@@ -1,2 +1,2 @@
-# w-humonsill
+# w-humon
 A silly game
