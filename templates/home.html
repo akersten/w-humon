@@ -3,24 +3,74 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <h1>huMon</h1>
+
+        </div>
+        <div class="col-md-4">
+            <h2 id="status" class="text-right"></h2>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8">
-            <h2>Leaderboard</h2>
-
-
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-            </fb:login-button>
-
-            <div id="status">
+    <div id="login" class="row" style="display: none">
+        <div  class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">Please log in to Facebook.</div>
+                <div class="panel-body" style="text-align: center !important;">
+                    <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" onlogin="checkLoginState();" ></div>
+                </div>
             </div>
 
-            <a href="#" onclick="getPicture()" class="btn btn-primary">Get picture</a>
         </div>
     </div>
+
+    <div id="app" style="display: none;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Leaderboard</div>
+                    <div class="panel-body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Currently Online</div>
+                    <div class="panel-body">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Active Battles</div>
+                    <div class="panel-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Battle History</div>
+                    <div class="panel-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <a href="#" onclick="logOut();" class="btn btn-default">Log Out</a>
+        </div>
+    </div>
+
 </div>
 
 {% endblock %}
